@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:layout_marginTop="100dp">
+
+    <RelativeLayout
+        android:id="@+id/memecontent"
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:background="@drawable/hihang">
+
+        <TextView
+            android:id="@+id/toptext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pisang apa yang panas abis dimakan?"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:gravity="center_horizontal"/>
+
+        <TextView
+            android:id="@+id/bottomtext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/toptext"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="120dp"
+            android:text="HIHANG HOHENG"
+            android:textColor="@color/white"
+            android:textSize="32sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <EditText
+        android:layout_marginTop="16dp"
+        android:id="@+id/editTop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/memecontent"
+        android:textColor="@color/black"
+        android:hint="Top Text"
+        android:textColorHint="@color/black"
+        android:textSize="16sp" />
+
+    <EditText
+        android:layout_marginTop="16dp"
+        android:id="@+id/editBottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTop"
+        android:textColor="@color/black"
+        android:hint="Bottom Text"
+        android:textColorHint="@color/black"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/btnSaveGallery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editBottom"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:text="SAVE TO IMAGE" />
+
+    <Button
+        android:id="@+id/btnAccept"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnSaveGallery"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:text="Accept" />
+
+  </RelativeLayout>
