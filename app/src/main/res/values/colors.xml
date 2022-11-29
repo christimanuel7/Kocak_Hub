@@ -8,4 +8,9 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="transparent">#00FFFFFF</color>
+    <color name="blacktransparent">#90000000</color>
+    <color name="bgcolor">#2C3333</color>
+    <color name="secondarycolor">#3F4E4F</color>
+    <color name="thirdcolor">#03506F</color>
+    <color name="black20">#80FFFFFF</color>
 </resources>

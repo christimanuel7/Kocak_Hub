@@ -1,12 +1,27 @@
 <resources>
-    <string name="app_name">My Application</string>
+    <string name="app_name">Kocak Hub</string>
+
+    <!--    ACTIVITY GET STARTED-->
+    <string name="txt_desc">Share your funny meme or pic on only one platform. You can share and create it anytime and anywhere</string>
+    <string name="btn_getstarted">Get Started</string>
+
+    <!--    ACTIVITY LOGIN  -->
+    <string name="txt_welcome">Welcome Back!</string>
+    <string name="login_desc">Please sign in your account</string>
+    <string name="edit_email">E-mail</string>
+    <string name="edit_password">Password</string>
+    <string name="btn_forgetpassword">Forget Password?</string>
+    <string name="btn_signin">Sign In</string>
+    <string name="no_account">Don\'t have an account?</string>
+    <string name="btn_register">Register</string>
+
     <string name="title_activity_login">LoginActivity</string>
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password</string>
     <string name="action_sign_in">Sign in or register</string>
     <string name="action_sign_in_short">Sign in</string>
-    <string name="welcome">"Welcome !"</string>
     <string name="invalid_username">Not a valid username</string>
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
+
 </resources>
