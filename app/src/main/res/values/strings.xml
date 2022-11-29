@@ -15,6 +15,15 @@
     <string name="no_account">Don\'t have an account?</string>
     <string name="btn_register">Register</string>
 
+    <!--    ACTIVITY REGISTER  -->
+    <string name="txt_regist">Create New Account</string>
+    <string name="register_desc">Fill in the form to regist your account</string>
+    <string name="edit_username">Username</string>
+    <string name="edit_repeatpassword">Repeat Password</string>
+    <string name="btn_signup">Sign Up</string>
+    <string name="have_account">Have an account?</string>
+    <string name="btn_login">Sign In</string>
+
     <string name="title_activity_login">LoginActivity</string>
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password</string>

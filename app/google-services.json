@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "544417826622",
+    "firebase_url": "https://projectprauas-default-rtdb.firebaseio.com",
+    "project_id": "projectprauas",
+    "storage_bucket": "projectprauas.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:544417826622:android:a50b4f87e3f9c288d5ce6f",
+        "android_client_info": {
+          "package_name": "com.example.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "544417826622-rf01lq4nmn9jkjmuaaio4m3bub14ha6u.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.myapplication",
+            "certificate_hash": "eef1389d80dc30318d9fd08262df543d5b29b04b"
+          }
+        },
+        {
+          "client_id": "544417826622-qq6ct14labj2vg2c1fbojkap84mr01kn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDtCt2CNVgjHz4YP2kUct2NdIbFbycPq34"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "544417826622-qq6ct14labj2vg2c1fbojkap84mr01kn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
