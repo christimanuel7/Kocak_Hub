@@ -17,6 +17,8 @@ import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.android.material.button.MaterialButton;
+import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.FirebaseDatabase;
@@ -24,8 +26,8 @@ import com.google.firebase.database.FirebaseDatabase;
 public class RegisterActivity extends AppCompatActivity {
 
     private TextView btnLogin;
-    private EditText editUsername,editEmail,editPassword,editRepeatPassword;
-    private Button btnRegister;
+    private TextInputEditText editUsername,editEmail,editPassword,editRepeatPassword;
+    private MaterialButton btnRegister;
     private FirebaseAuth mAuth;
     private ProgressDialog progressDialog;
 
@@ -59,8 +61,6 @@ public class RegisterActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 registerUser();
-                Intent register = new Intent(RegisterActivity.this, SplashActivity.class);
-                startActivity(register);
             }
         });
     }
@@ -72,37 +72,43 @@ public class RegisterActivity extends AppCompatActivity {
         String repeatpassword=editRepeatPassword.getText().toString().trim();
 
         if(username.isEmpty()){
-            editUsername.setError("Username is required!");
+            Toast.makeText(getApplicationContext(),"Email is required!",Toast.LENGTH_SHORT).show();
             editUsername.requestFocus();
             return;
         }
 
         if(email.isEmpty()){
-            editEmail.setError("Email is required!");
+            Toast.makeText(getApplicationContext(),"Email is required!",Toast.LENGTH_SHORT).show();
             editEmail.requestFocus();
             return;
         }
 
         if(!Patterns.EMAIL_ADDRESS.matcher(email).matches()){
-            editEmail.setError("Please provide valid email!");
+            Toast.makeText(getApplicationContext(),"Please provide valid email!",Toast.LENGTH_SHORT).show();
             editEmail.requestFocus();
             return;
         }
 
         if(password.isEmpty()){
-            editPassword.setError("Password is required!");
+            Toast.makeText(getApplicationContext(),"Password is required!",Toast.LENGTH_SHORT).show();
+            editPassword.requestFocus();
+            return;
+        }
+
+        if(password.length()<8){
+            Toast.makeText(getApplicationContext(),"Min. password length is 8 character!",Toast.LENGTH_SHORT).show();
             editPassword.requestFocus();
             return;
         }
 
         if(repeatpassword.isEmpty()){
-            editRepeatPassword.setError("Repeat Password is required!");
+            Toast.makeText(getApplicationContext(),"Repeat Password is required!",Toast.LENGTH_SHORT).show();
             editRepeatPassword.requestFocus();
             return;
         }
 
         if(!password.equals(repeatpassword)){
-            editRepeatPassword.setError("Password and repeat password does not match!");
+            Toast.makeText(getApplicationContext(),"Password and repeat password does not match!",Toast.LENGTH_SHORT).show();
             editPassword.requestFocus();
             return;
         }
@@ -121,9 +127,11 @@ public class RegisterActivity extends AppCompatActivity {
                                         public void onComplete(@NonNull Task<Void> task) {
                                             if(task.isSuccessful()){
                                                 Toast.makeText(RegisterActivity.this,"Account has been registered successfully!",Toast.LENGTH_SHORT).show();
+                                                Intent register = new Intent(RegisterActivity.this, LoginActivity.class);
+                                                startActivity(register);
                                             }
                                             else{
-                                                Toast.makeText(RegisterActivity.this,"Failed to regiter account! Try again",Toast.LENGTH_SHORT).show();
+                                                Toast.makeText(getApplicationContext(),"Failed to regiter account! Try again",Toast.LENGTH_SHORT).show();
                                             }
                                         }
                                     });

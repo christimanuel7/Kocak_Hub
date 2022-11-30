@@ -15,6 +15,12 @@
     <string name="no_account">Don\'t have an account?</string>
     <string name="btn_register">Register</string>
 
+<!--    ACTIVITY FORGOT PASSWORD-->
+    <string name="txt_reset">Forget Password</string>
+    <string name="reset_desc">Enter your email to send password reset</string>
+    <string name="back_signin">Back to sign in</string>
+    <string name="btn_reset">Send Request</string>
+
     <!--    ACTIVITY REGISTER  -->
     <string name="txt_regist">Create New Account</string>
     <string name="register_desc">Fill in the form to regist your account</string>
