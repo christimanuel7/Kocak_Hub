@@ -12,13 +12,12 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.Button;
 
 import com.example.myapplication.R;
 import com.example.myapplication.databinding.ActivityHomeBinding;
-import com.example.myapplication.fragment.MyMemeFragment;
-import com.example.myapplication.fragment.SocialFragment;
+import com.example.myapplication.fragment.MyPlaylistFragment;
+import com.example.myapplication.fragment.HomeFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 
@@ -43,16 +42,16 @@ public class HomeActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
 
-        replaceFragment(new SocialFragment());
+        replaceFragment(new HomeFragment());
 
         binding.bottomNavMenu.setOnNavigationItemSelectedListener(item -> {
 
             switch(item.getItemId()){
                 case R.id.home:
-                    replaceFragment(new MyMemeFragment());
+                    replaceFragment(new MyPlaylistFragment());
                     break;
                 case R.id.myplaylist:
-                    replaceFragment(new SocialFragment());
+                    replaceFragment(new HomeFragment());
                     break;
             }
 

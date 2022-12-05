@@ -10,9 +10,8 @@ import android.view.ViewGroup;
 import android.widget.GridView;
 
 import com.example.myapplication.R;
-import com.example.myapplication.adapter.MemeAdapter;
 
-public class MyMemeFragment extends Fragment {
+public class MyPlaylistFragment extends Fragment {
 
     private GridView gridView;
     private MemeAdapter memeAdapter;
@@ -23,7 +22,7 @@ public class MyMemeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        View view = inflater.inflate(R.layout.fragment_my_meme, container,false);
+        View view = inflater.inflate(R.layout.fragment_my_playlist, container,false);
 
         gridView = (GridView) view.findViewById(R.id.gridView);
         gridView.setAdapter(memeAdapter);
