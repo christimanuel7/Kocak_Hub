@@ -1,24 +1,20 @@
-package com.example.myapplication;
+package com.example.myapplication.activity;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.method.HideReturnsTransformationMethod;
 import android.util.Patterns;
 import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.myapplication.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.textfield.TextInputEditText;
-import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -100,12 +96,12 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful() && task.getResult()!=null){
+
                     FirebaseUser user=mAuth.getCurrentUser();
 
                     if(user.isEmailVerified()){
                         Toast.makeText(LoginActivity.this,"Account has been logged in successfully!",Toast.LENGTH_LONG).show();
-                        Intent login = new Intent(LoginActivity.this, MainActivity.class);
-                        startActivity(login);
+                        reload();
                     }
                     else{
                         user.sendEmailVerification();
@@ -116,5 +112,20 @@ public class LoginActivity extends AppCompatActivity {
                 }
             }
         });
+    }
+
+    private void reload(){
+        Intent home = new Intent(getApplicationContext(), HomeActivity.class);
+        startActivity(home);
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        // Check if user is signed in (non-null) and update UI accordingly.
+        FirebaseUser currentUser = mAuth.getCurrentUser();
+        if(currentUser != null){
+            reload();
+        }
     }
 }
